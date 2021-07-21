@@ -38,11 +38,11 @@
                         <li><img src="img/libreria.svg" alt="library Icon"> La tua libreria</li>
                     </ul>
                 </div>
-                <div>
+                <div class="playlist">
 
                     <h5>Playlist</h5>
 
-                    <ul>
+                    <ul >
                         <li><i class="fas fa-plus-square"></i> Crea Playlist</li>
                         <li>Nome Playlist</li>
                         <li>Nome Playlist</li>
@@ -176,7 +176,7 @@
 
                     <img src="img/sinister.jpeg" alt="sinister album cover">
 
-                    <div class="">
+                    <div class="song-playing">
 
                         <h5>Sinister</h5>
                         <p>Brano Nome</p>
@@ -185,28 +185,44 @@
 
                     <p><i class="far fa-heart"></i></p>
                     <p><i class="far fa-folder"></i></p>
+
                 </div>
     
-                <div class="flex-column  txt-white">
+                <div id="song-commands" class="flex-column  txt-white">
                     <div class="flex-row content-center items-center">
                         <p><i class="fas fa-random"></i></p>
                         <p><i class="fas fa-step-backward"></i></p>
-                        <p><i class="far fa-play-circle"></i></p>
+                        <h1><i class="far fa-play-circle"></i></h1>
                         <p><i class="fas fa-step-forward"></i></p>
                         <p><i class="fas fa-redo-alt"></i></p>
                     </div>
                     <div class="flex-row items-center">
-                        0:25
-                        <div id="song-tempo" class=""></div>
-                        4:35
+                        <p>0:25</p>
+                        <div id="song-tempo" class="">
+
+                            <div class="current-value">
+
+                                <div class="current-value-dot"></div>
+
+                            </div>
+
+                        </div>
+                        <p>4:35</p>
                     </div>
                 </div>
     
-                <div class="txt-white flex-row items-center">
+                <div id="volume-section" class="txt-white flex-row items-center">
                     <p><i class="fas fa-server"></i></p>
                     <p><i class="fas fa-desktop"></i></p>
                     <p><i class="fas fa-volume-up"></i></p>
-                    <div id="song-volume" class=""></div>
+                    <div id="song-volume" class="">
+
+                        <div class="current-value">
+                            
+                            <div class="current-value-dot"></div>
+
+                        </div>
+                    </div>
                 </div>
 
             </div>
