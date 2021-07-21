@@ -24,10 +24,15 @@ ul{
     overflow-y: auto;
 }
 
+.playlist{
+    flex-grow: 1;
+}
+
 .current-value{
     position: relative;
     height: 100%;
     width: 30%;
+    border-radius: 15px;
     background-color: rgb(197, 197, 197);
 }
 
@@ -95,7 +100,7 @@ ul{
 }
 
 .flex-shrink-cover{
-    flex: 0 1 150px
+    flex: 0 1 16%;
 }
 
 .content-space-between{
@@ -157,6 +162,19 @@ ul{
     overflow-y: auto;
 }
 
+#navbar-container div.playlist h5{
+    text-transform: uppercase;
+    color: white;
+}
+
+#navbar-container div.playlist i{
+    font-size: 2.5em;
+}
+
+#navbar-container div.playlist li:nth-child(1){
+    line-height: 40px;
+}
+
 #navbar-container ul{
     padding-bottom: 10px;
 }
@@ -169,33 +187,43 @@ ul{
 }
 
 #navbar-container img.bottom{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    margin-left: 2px;
+    margin-right: 10px;
+}
+
+#profile p{
+    font-size: 0.9em;
+    font-weight: 600;
+    color: white;
 }
 
 #profile-img{
     width: 25px;
     height: 25px;
     border-radius: 50%;
+    margin-right: 3px;
 }
 
 /* MAIN-SECTION */
 #main-section{
+    position: relative;;
     height: 100%;
     width: calc(100% - 200px);
 }
 
 /* UPGRADE-CONTAINER */
 #upgrade-container{
-    /* position: relative; */
+    position: absolute;
     height: 75px;
     width: 100%;
+    padding-right: 30px;
     background-color: rgb(27, 27, 27);
 }
 
 #upgrade-button{
-    position: fixed;
-    z-index: 4;
     padding: 10px 20px;
     text-transform: uppercase;
     font-size: 0.8em;
@@ -207,9 +235,9 @@ ul{
 
 /* SONG-CONTAINER */
 #song-container{
-    height: calc(100% - 75px);
+    height: 100vh;
     width: 100%;
-    padding: 10px;
+    padding: 85px 10px 10px;
     color: white;
     background-color: rgb(39, 52, 56);
 
@@ -229,7 +257,7 @@ ul{
 
 #song-container .flex-shrink-cover{
     text-align: center;
-    margin: 5px;
+    margin-right: 5px;
 }
 
 #song-container .flex-shrink-cover h5{
@@ -294,4 +322,36 @@ footer{
     height: 5px;
     border-radius: 15px;
     background-color: lightslategrey;
+}
+
+/* HOVER EFFECTS */
+#upgrade-button:hover{
+    transform: scale(1.1);
+}
+
+/* hover navbar */
+
+li:hover{
+    filter: brightness(100);
+}
+
+/* hover footer */
+#song-commands h1:hover{
+    transform: scale(1.1);
+}
+
+#song-volume:hover .current-value{
+    background-color: yellowgreen;
+}
+
+#song-volume:hover .current-value-dot{
+    display: block;
+}
+
+#song-tempo:hover .current-value{
+    background-color: yellowgreen;
+}
+
+#song-tempo:hover .current-value-dot{
+    display: block;
 }
