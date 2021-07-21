@@ -20,6 +20,10 @@ ul{
     margin: 5px 0  8px;
 }
 
+.overflow{
+    overflow-y: auto;
+}
+
 /* COLOR CLASS */
 .txt-white{
     color: white;
@@ -69,8 +73,8 @@ ul{
     flex-wrap: wrap;
 }
 
-.flex-basis{
-    flex: 0 1 100px
+.flex-shrink-cover{
+    flex: 0 1 200px
 }
 
 .content-space-between{
@@ -84,6 +88,8 @@ ul{
 .content-center{
     justify-content: center;
 }
+
+.content-flex-start
 
 .content-self-flexend{
     align-content: flex-end;
@@ -100,7 +106,6 @@ ul{
 /* CONTAINER */
 #container{
     height: 100vh;
-    background-color: greenyellow;
     overflow-y: auto;
 }
 
@@ -149,7 +154,6 @@ ul{
 #main-section{
     height: 100%;
     width: calc(100% - 200px);
-    background-color: indigo;
 }
 
 /* UPGRADE-CONTAINER */
@@ -174,6 +178,17 @@ ul{
     height: calc(100% - 75px);
     width: 100%;
     background-color: lightblue;
+}
+
+#song-type-selector li{
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 500;
+    padding: 10px 5px;
+}
+
+#song-container img{
+    width: 100%;
 }
 
 /* FOOTER-CONTAINER */
