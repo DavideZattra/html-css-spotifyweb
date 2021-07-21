@@ -221,6 +221,15 @@ ul{
 
 /* FOOTER-CONTAINER */
 footer{
-    background-color: green;
     height: 75px;
+}
+
+#footer-container{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(31, 31, 31);
+}
+
+#currently-playing img{
+    height: 40px;
 }
