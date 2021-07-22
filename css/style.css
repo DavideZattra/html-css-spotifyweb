@@ -49,6 +49,9 @@ ul{
     background-color: white;
 }
 
+.position-relative{
+    position: relative;
+}
 
 /* COLOR CLASS */
 .txt-white{
@@ -234,8 +237,15 @@ ul{
 }
 
 /* SONG-CONTAINER */
+#song-type-selector li{
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 10px 5px;
+    color: lightgray;
+}
+
 #song-container{
-    height: 100vh;
     width: 100%;
     padding: 85px 10px 10px;
     color: white;
@@ -243,16 +253,25 @@ ul{
 
 }
 
-#song-type-selector li{
-    text-transform: uppercase;
-    font-size: 0.7em;
-    font-weight: 500;
-    padding: 10px 5px;
-    color: lightgray;
+#song-container .cover-container{
+    margin: 15px 0;
+    
 }
 
 #song-container img{
     width: 100%;
+}
+
+#song-container .playbutton{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#song-container .playbutton i{
+    font-size: 4em;
 }
 
 #song-container .flex-shrink-cover{
@@ -269,6 +288,11 @@ ul{
     color: gray;
     font-size: 0.7em;
 }
+
+#song-container .artist-cover-container{
+    margin: 15px 0;
+}
+
 
 #song-container .artist-cover-container img{
     border-radius: 50%;
@@ -299,7 +323,13 @@ footer{
 
 #currently-playing>p{
     margin-right: 8px;
+    color: gray;
 
+}
+
+.song-playing p{
+    font-size: 0.7em;
+    color: gray;
 }
 
 #song-commands p{
@@ -327,25 +357,64 @@ footer{
 /* HOVER EFFECTS */
 #upgrade-button:hover{
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 /* hover navbar */
 
 li:hover{
-    filter: brightness(100);
+    filter: brightness(200%);
+    cursor: pointer;
+}
+
+#install:hover img{
+    opacity: 1;
+}
+
+#install:hover{
+    color: white;
+    cursor: pointer;
+}
+
+/* hover song-container */
+#song-container div.position-relative.opacity:hover{
+    cursor: pointer;
+}
+
+#song-container div.position-relative.opacity:hover .playbutton{
+    display: block;
+}
+
+#song-container div.position-relative.opacity:hover img{
+    filter: opacity(.5);
 }
 
 /* hover footer */
+#footer-container i:hover{
+    cursor: pointer;
+    color: white;
+}
+
 #song-commands h1:hover{
     transform: scale(1.1);
+    cursor: pointer;
+}
+
+#song-volume:hover{
+    cursor: pointer;
 }
 
 #song-volume:hover .current-value{
     background-color: yellowgreen;
+    cursor: pointer;
 }
 
 #song-volume:hover .current-value-dot{
     display: block;
+}
+
+#song-tempo:hover{
+    cursor: pointer;
 }
 
 #song-tempo:hover .current-value{
@@ -354,4 +423,10 @@ li:hover{
 
 #song-tempo:hover .current-value-dot{
     display: block;
+}
+
+.song-playing p:hover{
+    text-decoration: underline; 
+    color: white;
+    cursor: pointer;
 }
