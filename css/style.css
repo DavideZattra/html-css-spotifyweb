@@ -157,8 +157,11 @@ ul{
 
 #logo-container img{
     height: 50px;
-    /* padding: 0 3px 0 10px; */
-    /* filter: invert(1); */
+    
+}
+
+#small-logo-container{
+    display: none;
 }
 
 #navbar-container div.playlist{
@@ -182,11 +185,19 @@ ul{
     padding-bottom: 10px;
 }
 #navbar-container li{
+    
     padding: 8px;
 }
 
 #navbar-container li img{
-    height: 20px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+#navbar-container li p{
+    display: inline-block;
+    vertical-align: middle;
+
 }
 
 #navbar-container img.bottom{
@@ -377,7 +388,7 @@ li:hover{
 }
 
 /* hover song-container */
-#song-container div.position-relative.opacity:hover{
+#song-container div.flex-shrink-cover:hover{
     cursor: pointer;
 }
 
@@ -429,4 +440,77 @@ li:hover{
     text-decoration: underline; 
     color: white;
     cursor: pointer;
+}
+
+/* mediaqueries breakpoint */
+@media screen and (min-width: 768.1px) and (max-width: 1100px) {
+    .flex-shrink-cover{
+        flex: 0 1 23.5%;
+    }
+
+    #song-type-selector ul{
+        flex-wrap: wrap;          
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 512.1px){
+    .flex-shrink-cover{
+        flex: 0 1 47.5%;
+    }
+
+    #song-type-selector ul{
+        flex-wrap: wrap;          
+    }
+}
+
+@media screen and (max-width: 512px){
+    .flex-shrink-cover{
+        flex: 0 1 47.5%;
+    }
+
+    #song-type-selector ul{
+        flex-wrap: wrap;          
+    }
+
+    #navbar-container{
+        justify-content: space-between;
+        width: 50px;
+    }
+
+    #small-logo-container{
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #navbar-container li{
+        padding: 0 0 5px 2px;
+    }
+
+    #navbar-container li img{
+        display: block;
+    }
+
+    #navbar-container div.line.bg-gray{
+        background-color: transparent;
+    }
+
+    #navbar-container li p{
+        display: none;
+    }
+
+    #navbar-container p{
+        display: none;
+    }
+    
+    #logo-container{
+        display: none;
+    }
+
+    #navbar-container .playlist{
+        display: none;
+    }
+
+    #main-section{
+        width: calc(100% - 50px);
+    }
 }
