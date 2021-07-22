@@ -104,6 +104,7 @@ ul{
 
 .flex-shrink-cover{
     flex: 0 1 16%;
+    margin-bottom: 5px;
 }
 
 .content-space-between{
@@ -322,6 +323,9 @@ footer{
     background-color: rgb(31, 31, 31);
 }
 
+#currently-playing{
+    flex-grow: 1;
+}
 
 #currently-playing img{
     height: 40px;
@@ -338,9 +342,22 @@ footer{
 
 }
 
-.song-playing p{
+#volume-section{
+    flex-grow: 2;
+    justify-content: space-evenly;
+}
+
+.song-playing-name p{
     font-size: 0.7em;
     color: gray;
+}
+
+#favourites p{
+    margin: 5px;
+}
+
+#song-commands{
+    flex-grow: 6;
 }
 
 #song-commands p{
@@ -348,18 +365,18 @@ footer{
 }
 
 #song-tempo{
-    width: 250px;
+    width: 85%;
     height: 5px;
     border-radius: 15px;
     background-color: lightslategrey;
 }
 
 #volume-section p{
-    margin: 0 10px;
+    /* margin: 0 10px; */
 }
 
 #song-volume{
-    width: 100px;
+    width: 50%;
     height: 5px;
     border-radius: 15px;
     background-color: lightslategrey;
@@ -504,6 +521,10 @@ li:hover{
     
     #logo-container{
         display: none;
+    }
+
+    #favourites{
+        flex-direction: column;
     }
 
     #navbar-container .playlist{
